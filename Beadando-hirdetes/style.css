@@ -1,0 +1,63 @@
+.Felso{
+    background-color: chocolate;
+    width: 100%;
+}
+.asd{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+/*index.php*/
+a{
+    color: rgb(19, 59, 37);
+    font-size: large;
+}
+.ful{
+    float:left;
+    width:120px;
+    height:36px;
+    margin: 0 2px;
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;    
+}
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+td{
+    text-align: center;
+    vertical-align: bottom;
+}
+.forma{
+    text-align:right;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hatterkep{
+    background-image: url("hatterkep.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size:cover;
+    
+}
+/* registrationui.php*/
+.hatter{
+    background-image: url("regisztraciohatter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*addnewui.php hez*/
+.hatterek{
+    background-size: auto;
+    background-color: darkcyan;
+}
+.MenuSav{
+    font-size: 20px;
+    text-transform: capitalize;    
+}
+.hird{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(30, 17, 87);
+}
