@@ -1,4 +1,5 @@
 <?php
+//Felhasználók módosítása
 session_start();
 require("Connect.php");
 ?>

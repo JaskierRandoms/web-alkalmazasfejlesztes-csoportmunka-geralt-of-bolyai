@@ -2,7 +2,6 @@
 //Új hirdetés feladása
 require("Connect.php");
 session_start();
-$con;
 $user = $_SESSION['user'];
 $nev = $_POST['hnev'];
 $szoveg = $_POST['szoveg'];

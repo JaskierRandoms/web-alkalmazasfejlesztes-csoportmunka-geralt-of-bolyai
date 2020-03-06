@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2020. Feb 20. 07:47
--- Kiszolgáló verziója: 10.4.10-MariaDB
--- PHP verzió: 7.3.12
+-- Létrehozás ideje: 2020. Feb 28. 22:14
+-- Kiszolgáló verziója: 10.4.11-MariaDB
+-- PHP verzió: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -27,22 +27,24 @@ USE `web`;
 -- --------------------------------------------------------
 
 --
--- Tábla szerkezet ehhez a táblához `content`
+-- Tábla szerkezet ehhez a táblához `content2`
 --
 
-CREATE TABLE `content` (
-  `userid` int(11) NOT NULL,
+CREATE TABLE `content2` (
+  `userid` int(11) DEFAULT NULL,
   `kep` longtext COLLATE utf8_hungarian_ci DEFAULT NULL,
-  `nev` tinytext COLLATE utf8_hungarian_ci NOT NULL,
-  `szoveg` longtext COLLATE utf8_hungarian_ci NOT NULL
+  `nev` tinytext COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `szoveg` tinytext COLLATE utf8_hungarian_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
--- A tábla adatainak kiíratása `content`
+-- A tábla adatainak kiíratása `content2`
 --
 
-INSERT INTO `content` (`userid`, `kep`, `nev`, `szoveg`) VALUES
-(4, 'kepek', 'nevek', 'szovegek');
+INSERT INTO `content2` (`userid`, `kep`, `nev`, `szoveg`) VALUES
+(2, NULL, 'asd hirdetése', 'asd vagyok eladó'),
+(2, NULL, 'asd2', '1231'),
+(2, NULL, 'asd asd', '32312312');
 
 -- --------------------------------------------------------
 
@@ -62,18 +64,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user`, `password`, `admin`) VALUES
-(3, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1),
-(4, 'asd', 'f10e2821bbbea527ea02200352313bc059445190', 0),
-(6, 'valami', '5fb6dfa00b3cb9a754c6bc1a075b822a032e48b3', 0);
+(1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1),
+(2, 'asd', 'f10e2821bbbea527ea02200352313bc059445190', 0);
 
 --
 -- Indexek a kiírt táblákhoz
 --
 
 --
--- A tábla indexei `content`
+-- A tábla indexei `content2`
 --
-ALTER TABLE `content`
+ALTER TABLE `content2`
   ADD KEY `userid` (`userid`);
 
 --
@@ -90,17 +91,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Megkötések a kiírt táblákhoz
 --
 
 --
--- Megkötések a táblához `content`
+-- Megkötések a táblához `content2`
 --
-ALTER TABLE `content`
-  ADD CONSTRAINT `content_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`);
+ALTER TABLE `content2`
+  ADD CONSTRAINT `content2_ibfk_1` FOREIGN KEY (`userid`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

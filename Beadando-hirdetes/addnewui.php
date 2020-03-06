@@ -16,15 +16,15 @@ session_start();
     <?php
             if(isset($_SESSION['logedin']))
             {
-                include("checkpermission.php");
-                if(CheckPer())
+                include("Connect.php");
+                if(CheckPer($con))
                 {
                     echo "<table class=Felso>
                     <tr>         
                          <th><h1>Hirdetés feladása</h1></th>
-                            <td><a href=index.php class=MenuSav>Kezdőlap</a></td>
-                            <td><a href=modifyui.php name=ModifyHirdetes class=MenuSav>Hirdetés módosítása</a></td>
-                            <td><a href=usersui.php name=ModifyUsers class=MenuSav>Felhasználók módosítása</a></td>
+                            <td><a href=index.php>Kezdőlap</a></td>
+                            <td><a href=modifyui.php name=ModifyHirdetes>Hirdetés módosítása</a></td>
+                            <td><a href=usersui.php name=ModifyUsers>Felhasználók módosítása</a></td>
                          <td>
                              <form action=login.php method=POST style=text-align:right>
                                 <a href=profilui.php style=text-alig:right>".$_SESSION['user']."</a><br>
@@ -39,8 +39,8 @@ session_start();
                     echo "<table class=Felso>
                     <tr>         
                          <th><h1>Hirdetés feladása</h1></th>
-                            <td><a href=index.php class=MenuSav>Kezdőlap</a></td>
-                            <td><a href=modifyui.php name=ModifyHirdetes class=MenuSav>Hirdetés módosítása</a></td>
+                            <td><a href=index.php>Kezdőlap</a></td>
+                            <td><a href=modifyui.php name=ModifyHirdetes>Hirdetés módosítása</a></td>
                          <td>
                              <form action=login.php method=POST style=text-align:right>
                                 <a href=profilui.php>".$_SESSION['user']."</a><br>
@@ -54,16 +54,16 @@ session_start();
             }
                 ?>
     <br>
-    <table width=100% align="center">
+    <table class="addujtabla">
         <form action="addnew.php" method="POST" enctype="multipart/form-data">
             <tr>
-                <td class="hird">Hirdetés neve<br><input type="text" name="hnev" ></td>
+                <td>Hirdetés neve<br><input type="text" name="hnev" ></td>
             <tr>
             <tr>
-                <td class="hird">A hirdetés információi<br><input type="text" name="szoveg"></td>
+                <td>A hirdetés információi<br><input type="text" name="szoveg" style="height:500px;width:500px"></td>
             </tr>
             <tr>
-                <td><input type="file" name="img"><input type="submit" name="feladas" value="Hirdetés feladása"></td>
+                <td class="fileok"><input type="file" name="img"><input type="submit" name="feladas" value="Hirdetés feladása"></td>
             </tr>
         </form>
     </table>

@@ -1,6 +1,6 @@
 <?php
+//Session endelése
     session_start();
-    
     $_SESSION['logedin'] = false;
     $_SESSION[] = array();
     session_unset();

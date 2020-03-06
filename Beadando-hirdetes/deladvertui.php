@@ -1,4 +1,5 @@
 <?php
+//Hirdetés törlésének kinézete
     session_start();
 ?>
 <!DOCTYPE html>
@@ -11,10 +12,10 @@
 </head>
 <body>
 <?php
-
+$_SESSION['Adminban'] = true;
 echo "<table class=Felso>
 <tr>         
-     <th><h1>Felhasználók módosítása</h1><br><h2>Felhasználó hirdetésének törlése</h2></th>
+     <th><h1>Felhasználók módosítása</h1><br><h2>Felhasználó jogainak szerkesztése</h2></th>
         <td><a href=index.php class=MenuSav>Kezdőlap</a></td>
         <td><a href=addnewui.php name=NewHirdetes class=MenuSav>Hirdetés feladása</a></td>
         <td><a href=modifyui.php name=ModifyHirdetes class=MenuSav>Hirdetés módosítása</a></td>
@@ -30,5 +31,12 @@ echo "<table class=Felso>
 </table>";  
 
 ?>
+<h2><?php echo $_SESSION['nev']." hirdetései";?></h2>
+<table width=100%>
+    <?php 
+    require("Connect.php");
+    echo SelectOwnedElements($con,$_SESSION['nev']);
+    ?>
+</table>
 </body>
 </html>

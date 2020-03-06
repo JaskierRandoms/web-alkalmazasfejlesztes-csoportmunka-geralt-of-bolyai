@@ -1,3 +1,4 @@
+<!-- Regisztráció kinézete -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,10 +26,17 @@
                     </td>           
                 </tr>       
         </table>  
-    <form action="registration.php" method="POST" class=asd>
+    <form action="registrationui.php" method="POST" class=asd>
         <input type="text" name="fnev" placeholder="asd123">
         <input type="password" name="jelszo" placeholder="******">
         <input type="submit" name="register" value="Regisztráció">
     </form>
+    <?php
+        if(isset($_POST['register'])){
+            require("Connect.php");
+            Registration($con);        
+        }
+
+    ?>
 </body>
 </html>

@@ -2,11 +2,6 @@
     background-color: chocolate;
     width: 100%;
 }
-.asd{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
 /*index.php*/
 a{
     color: rgb(19, 59, 37);
@@ -28,6 +23,7 @@ h1{
 td{
     text-align: center;
     vertical-align: bottom;
+    padding-right: 20px;
 }
 .forma{
     text-align:right;
@@ -37,27 +33,111 @@ td{
 .hatterkep{
     background-image: url("hatterkep.jpg");
     background-repeat: no-repeat;
-    background-position-x: center;
     background-size:cover;
-    
 }
-/* registrationui.php*/
+/*addnewui.php hez*/
+.hatterek{
+    background-size: auto;
+    background-image: url("mindenhatter.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.addujtabla{
+    width:100%;
+    text-align: center;
+    color:rgb(61, 99, 224);
+    font-weight: bold;
+    font-size: x-large;
+}
+.fileok{
+    color:red;
+}
+/*kezdőoldal hirdetéseinek a kinézete*/
+.hirdetesekindex{
+    color:lightblue;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: rgba(143, 131, 88, 0.493);
+}
+a:link{
+    color:lightgreen;
+}
+a:visited{
+    color:white;
+}
+/*felhasználó adatainak a módositásának a kinézete*/
+.modositasok{
+    margin-left: auto;
+    margin-right: auto;
+    color:rgb(61, 99, 224);
+    font-weight: bold;
+    font-size: x-large;
+    background-color: rgba(143, 131, 88, 0.493);
+}
+.modositbody{
+    background-image: url("mindenhatter.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/*felhasználói profil nevének változtatása*/
+.profiluihatter{
+    background-image: url("mindenhatter.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.profiluitabla{
+    width:100%;
+    text-align: center;
+    color:rgb(61, 99, 224);
+    font-weight: bold;
+    font-size: x-large;
+}
+/*üzenetek küldése*/
+.uzenetekhatter{
+    background-image: url("mindenhatter.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.uzenetektable{
+    width:100%;
+    text-align: center;
+    color:rgb(27, 58, 114);
+    font-weight: bold;
+    font-size: x-large;
+}
+/*üzeneteknek a háttere*/
+.sendmessagehatter{
+    background-image: url("mindenhatter.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/*a regisztrációnak a kinézete*/
 .hatter{
     background-image: url("regisztraciohatter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
-/*addnewui.php hez*/
-.hatterek{
-    background-size: auto;
-    background-color: darkcyan;
+.asd{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: x-large;
 }
-.MenuSav{
-    font-size: 20px;
-    text-transform: capitalize;    
+/*advertui kinézete*/
+.felhhirdeteseihatter{
+    background-image: url("regisztraciohatter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
 }
-.hird{
-    font-size: 15px;
+.tablaadv{
+    width:100%;
+    color:rgb(27, 58, 114);
     font-weight: bold;
-    color: rgb(30, 17, 87);
+    font-size: x-large;
+}
+.advh2{
+    color:rgb(27, 58, 114);
+    font-weight: bold;
+    font-size: x-large;
 }

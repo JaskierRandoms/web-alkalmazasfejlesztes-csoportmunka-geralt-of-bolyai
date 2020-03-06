@@ -1,4 +1,5 @@
 <?php
+//Bejelentkezés
     session_start();
     $_SESSION['logedin'] = false;
     require("Connect.php");

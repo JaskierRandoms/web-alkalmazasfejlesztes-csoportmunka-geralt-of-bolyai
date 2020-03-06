@@ -16,8 +16,8 @@
         <?php          
             if(isset($_SESSION['logedin']))
             {
-                include("checkpermission.php");
-                if(CheckPer())
+                include("Connect.php");
+                if(CheckPer($con))
                 {
                     echo "<table class=Felso>
                     <tr>         
@@ -31,8 +31,8 @@
                                 <a href=profilui.php style=text-alig:right>".$_SESSION['user']."</a><br>
                                 <a href=uzenetui.php style=text-align:right>Üzenetek</a><br>
                                 <a href=sessionend.php style=text-align: right>Kijelentkezés</a>
-                        </form>           
-                        </td>           
+                        </form>
+                        </td>
                     </tr>       
                     </table>";  
                 }
@@ -74,18 +74,14 @@
                 </tr>       
                 </table>";  
             }
-        ?>                          
-        
+        ?>        
    <br>
-   <table>
-            <?php
-                require("selectadverts.php");
-                echo SelectAllElements();
-            ?>
-            
-   </table>
-       
-    
+   <table class="hirdetesekindex">
+        <?php
+            require("Connect.php");
+            echo SelectAllElements($con);
+        ?>            
+   </table>    
 </center>
 </body>
 </html>
